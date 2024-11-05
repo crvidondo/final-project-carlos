@@ -23,11 +23,13 @@ The project consists of the following files:
 
     - [Tableau Dashboard](link): Includes visualization charts that effectively summarize the key findings from the EDA.
 
-    - [data_merging.py](linkgithub): Loads multiple datasets and merges into one comprehensive DataFrame.
+    - [data_merging.py](https://github.com/crvidondo/final-project-carlos/blob/main/data_merging.py): Loads multiple datasets and merges into one comprehensive DataFrame.
     
-    - [data_cleaning_eda.py](linkgithub): Collects and analyzes data, followed by cleaning, transforming, and preprocessing steps before building the predictive model.
+    - [data_cleaning_eda.py](https://github.com/crvidondo/final-project-carlos/blob/main/data_cleaning_eda.py): Collects and analyzes data, followed by cleaning, transforming, and preprocessing steps before building the predictive model.
     
-    - [model_building.py](link github): A well-documented Python code that includes model selection, training, predictions performed and evaluation metrics.
+    - [model_building.py](https://github.com/crvidondo/final-project-carlos/blob/main/model_building.py): A well-documented Python code that includes model selection, training, predictions performed and evaluation metrics.
+
+    - gradient_boosting_model.pkl: Saved model that can be loaded for making predictions. 
     
     - [streamlit_app.py](link): Deployment of the product into a user-friendly web app.
 
@@ -52,7 +54,7 @@ The project consists of the following files:
     - Outliers in 'Price' column were removed by using the IQR method.
     - Used correlation matrices, scatter plots and histograms to understand distributions.
 
-3. ***Machine Learning:**
+3. **Machine Learning:**
     - Feature Engineering: Selected relevant numerical columns for scaling and applied StandardScaler to standardize their values.
     - Model selection: Trained multiple regression models, including Linear Regression, Random Forest, Gradient Boosting, Decision Tree, and Support Vector Regressor.
     - Evaluation: Using metrics like RMSE, MAE, and R².
