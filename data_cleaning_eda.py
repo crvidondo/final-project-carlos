@@ -90,7 +90,7 @@ plt.show()
 plt.figure(figsize=(10, 6))
 sns.histplot(df['Price'], bins=50, kde=True)
 plt.title('Price Distribution')
-plt.xlabel('Price')
+plt.xlabel('Price per night')
 plt.show()
 
 
@@ -107,6 +107,12 @@ df = pd.get_dummies(df, columns=['Room Type'], drop_first=True)
 df['Room Type_Hotel room'] = df['Room Type_Hotel room'].astype(int)
 df['Room Type_Private room'] = df['Room Type_Private room'].astype(int)
 df['Room Type_Shared room'] = df['Room Type_Shared room'].astype(int)
+
+# Create binary columns for specific high-value amenities that will upgrade the price for the AirBnb
+df['Has_Pool'] = df['Amenities'].apply(lambda x: 1 if 'Pool' in x else 0)
+df['Has_Wifi'] = df['Amenities'].apply(lambda x: 1 if 'Wifi' in x else 0)
+df['Has_Kitchen'] = df['Amenities'].apply(lambda x: 1 if 'Kitchen' in x else 0)
+df['Has_Elevator'] = df['Amenities'].apply(lambda x: 1 if 'Elevator' in x else 0)
 
 
 # 8. SAVE THE CLEANED DATASET

@@ -19,21 +19,21 @@ https://github.com/crvidondo/final-project-carlos
 ## Files and deliverables
 The project consists of the following files:
 
-    - [data](Link): A folder containing different .csv files that were merged into one to be used for model training. The dataset was download from [Kaggle](https://www.kaggle.com/datasets/rusiano/madrid-airbnb-data/data?select=calendar.csv)
+- [data](Link): A folder containing different .csv files that were merged into one to be used for model training. The dataset was download from [Kaggle](https://www.kaggle.com/datasets/rusiano/madrid-airbnb-data/data?select=calendar.csv)
 
-    - [Tableau Dashboard](link): Includes visualization charts that effectively summarize the key findings from the EDA.
+- [Tableau Dashboard](link): Includes visualization charts that effectively summarize the key findings from the EDA.
 
-    - [data_merging.py](https://github.com/crvidondo/final-project-carlos/blob/main/data_merging.py): Loads multiple datasets and merges into one comprehensive DataFrame.
+- [data_merging.py](https://github.com/crvidondo/final-project-carlos/blob/main/data_merging.py): Loads multiple datasets and merges into one comprehensive DataFrame.
     
-    - [data_cleaning_eda.py](https://github.com/crvidondo/final-project-carlos/blob/main/data_cleaning_eda.py): Collects and analyzes data, followed by cleaning, transforming, and preprocessing steps before building the predictive model.
+- [data_cleaning_eda.py](https://github.com/crvidondo/final-project-carlos/blob/main/data_cleaning_eda.py): Collects and analyzes data, followed by cleaning, transforming, and preprocessing steps before building the predictive model.
     
-    - [model_building.py](https://github.com/crvidondo/final-project-carlos/blob/main/model_building.py): A well-documented Python code that includes model selection, training, predictions performed and evaluation metrics.
+- [model_building.py](https://github.com/crvidondo/final-project-carlos/blob/main/model_building.py): A well-documented Python code that includes model selection, training, predictions performed and evaluation metrics.
 
-    - gradient_boosting_model.pkl: Saved model that can be loaded for making predictions. 
+- [gradient_boosting_model.pkl](linkgithub): Saved model that can be loaded for making predictions. 
     
-    - [streamlit_app.py](link): Deployment of the product into a user-friendly web app.
+- [streamlit_app.py](link): Deployment of the product into a user-friendly web app.
 
-    - [Project presentation](link github): Powerpoint file that presents the project to the cohort.
+- [Project presentation](link github): Powerpoint file that presents the project to the cohort.
 
 
 ## Project overview
@@ -77,6 +77,8 @@ The project consists of the following files:
    pip install -r requirements.txt
    ```
 
-3. Run the app
+3. Run the model_building.py to create the best model. 
+
+4. Run the app
    ```bash
    streamlit run streamlit_app.py

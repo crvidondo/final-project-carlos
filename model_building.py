@@ -37,7 +37,10 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 
 # Identify and select only numerical columns that make sense to scale
 """ Columns that are one-hot encoded or that have binary values don't need to be standardized """
-num_cols = ['Capacity', 'Bedrooms', 'Number of Reviews', 'Guest Satisfaction', 'Cleanliness Rating']
+num_cols = ['Available', 'Capacity', 'Superhost', 'Bedrooms', 'Number of Reviews', 'Guest Satisfaction', 'Cleanliness Rating', 
+            'Room Type_Hotel room', 'Room Type_Private room', 'Room Type_Shared room',
+            'Has_Pool', 'Has_Wifi', 'Has_Kitchen', 'Has_Elevator'
+            ]
 
 # Initialize the scaler
 scaler = StandardScaler()
@@ -49,10 +52,6 @@ X_test_scaled = scaler.transform(X_test[num_cols])
 # Convert scaled data back to DataFrame with only the scaled columns
 X_train_scaled_df = pd.DataFrame(X_train_scaled, columns=num_cols, index=X_train.index)
 X_test_scaled_df = pd.DataFrame(X_test_scaled, columns=num_cols, index=X_test.index)
-
-# Replace the original columns in X_train and X_test with the scaled versions
-X_train.update(X_train_scaled_df)
-X_test.update(X_test_scaled_df)
 
 
 # MODEL BUILDING AND EVALUATION
