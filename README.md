@@ -19,9 +19,9 @@ https://github.com/crvidondo/final-project-carlos
 ## Files and deliverables
 The project consists of the following files:
 
-- [data](Link): A folder containing different .csv files that were merged into one to be used for model training. The dataset was download from [Kaggle](https://www.kaggle.com/datasets/rusiano/madrid-airbnb-data/data?select=calendar.csv)
+- [datasets](Link): A folder containing two different .csv files: one with all datasets merged into one raw; and another that was cleaned and used later for model training. The original dataset was download from [Kaggle](https://www.kaggle.com/datasets/rusiano/madrid-airbnb-data/data?select=calendar.csv)
 
-- [Tableau Dashboard](link): Includes visualization charts that effectively summarize the key findings from the EDA.
+- [Tableau Dashboard](linktableaupublic): Includes visualization charts that effectively summarize the key findings from the EDA.
 
 - [data_merging.py](https://github.com/crvidondo/final-project-carlos/blob/main/data_merging.py): Loads multiple datasets and merges into one comprehensive DataFrame.
     
@@ -29,9 +29,13 @@ The project consists of the following files:
     
 - [model_building.py](https://github.com/crvidondo/final-project-carlos/blob/main/model_building.py): A well-documented Python code that includes model selection, training, predictions performed and evaluation metrics.
 
-- [gradient_boosting_model.pkl](linkgithub): Saved model that can be loaded for making predictions. 
+- [xgboost_model.pkl](linkgithub): Saved model that can be loaded for making predictions.
+
+- [scaler_carlos.pkl](linkgithub): Saved scaler that was trained with the data.
+
+- [requirements.txt](linkgithub): Lists all the packages required for the project.
     
-- [streamlit_app.py](link): Deployment of the product into a user-friendly web app.
+- [streamlit_app.py](linkgithub): Deployment of the product into a user-friendly web app.
 
 - [Project presentation](link github): Powerpoint file that presents the project to the cohort.
 
@@ -40,32 +44,33 @@ The project consists of the following files:
 
 1. **Data Merging:**
     - Multiple datasets were merged into one by using joins.
-    - From the total 100 columns only 15 were essential for the project and were selected.
-    - Duplicate rows with same 'id' were dropped.
+    - From the total 100 columns only 16 were essential for the project and were selected.
+    - Rename columns for easy management.
 
 2. **Data Cleaning:**
-    - 'Bathroom' column was dropped due to lack of data.
     - Rows with NaN values in 'Superhost' column were dropped. 
     - Missing values in numerical columns were handled by using imputation strategies (filling with the median).
-    - Categorical variables were converted to numeric formats using label encoding and one-hot encoding ('Superhost', 'Available', 'Room Type')
+    - Binary categorical variables (True/False) were converted to numeric formats using label encoding ('Superhost', 'Available').
+    - Multi-class categorical columns ('Room Type', 'Location') were converted into numerical using One-Hot Encoding and new columns were displayed.
+    - Created binary columns for specific high-value amenities that will upgrade the price for the AirBnb.
 
 3. **Exploratory Data Analisys:**
-    - Checked distributions and visualized relationships between key features and the target variable.
     - Outliers in 'Price' column were removed by using the IQR method.
+    - Checked distributions and visualized relationships between key features and the target variable.
     - Used correlation matrices, scatter plots and histograms to understand distributions.
 
 3. **Machine Learning:**
     - Feature Engineering: Selected relevant numerical columns for scaling and applied StandardScaler to standardize their values.
-    - Model selection: Trained multiple regression models, including Linear Regression, Random Forest, Gradient Boosting, Decision Tree, and Support Vector Regressor.
+    - Model selection: Trained multiple regression models, including Linear Regression, Random Forest, Gradient Boosting, Decision Tree, Support Vector Regressor and XGBoost.
     - Evaluation: Using metrics like RMSE, MAE, and R².
-    - Hyperparameter Tuning: Applied GridSearchCV to fine-tune the hyperparameters of the Gradient Boosting model, that was the bes performer.
-    - Saving: model was saved using pickle for future use.
+    - Hyperparameter Tuning: Applied GridSearchCV to fine-tune the hyperparameters of the Gradient Boosting model and the XGBoost, that were the two best performers.
+    - Saving: best model was saved using pickle for future use.
 
 4. **Product:**
-    - 
+    - Streamlit code that builds a user-friendly web application for predicting Airbnb nightly prices based on property details.
 
 
-## Installation - use locally 
+## Installation 
 
 1. Clone the repository:
    ```bash
@@ -77,7 +82,7 @@ The project consists of the following files:
    pip install -r requirements.txt
    ```
 
-3. Run the model_building.py to create the best model. 
+3. Run the model_building.py to create the best model or simply use the XGBoost model saved into the pickle file.
 
 4. Run the app
    ```bash
