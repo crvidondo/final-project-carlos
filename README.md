@@ -39,7 +39,7 @@ The project consists of the following files:
     
 - [streamlit_app.py](https://github.com/crvidondo/final-project-carlos/blob/main/streamlit_app.py): Deployment of the product into a user-friendly web app.
 
-- [Final Project Presentation](link github): Powerpoint file that presents the project to the cohort.
+- [Final Project Presentation](https://github.com/crvidondo/final-project-carlos/blob/main/Final%20Project%20Presentation.pptx): Powerpoint file that presents the project to the cohort.
 
 
 ## Project overview
