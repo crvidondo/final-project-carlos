@@ -19,9 +19,11 @@ https://github.com/crvidondo/final-project-carlos
 ## Files and deliverables
 The project consists of the following files:
 
-- [datasets](Link): A folder containing two different .csv files: one with all datasets merged into one raw; and another that was cleaned and used later for model training. The original dataset was download from [Kaggle](https://www.kaggle.com/datasets/rusiano/madrid-airbnb-data/data?select=calendar.csv)
+- [datasets](https://github.com/crvidondo/final-project-carlos/tree/main/datasets): A folder containing two different .csv files: one with all datasets merged into one raw; and another that was cleaned and used later for model training. The original dataset was download from [Kaggle](https://www.kaggle.com/datasets/rusiano/madrid-airbnb-data/data?select=calendar.csv)
 
-- [Tableau Dashboard](linktableaupublic): Includes visualization charts that effectively summarize the key findings from the EDA.
+- [images/neighborhoods](https://github.com/crvidondo/final-project-carlos/tree/main/images/neighborhoods): Folder containing images of different Madrid's locations that are displayed in the app.
+
+- [Tableau Dashboard](https://public.tableau.com/app/profile/carlos.rodr.guez.vidondo/viz/AirbnbFinalProject-Carlos/Dashboard1): Includes visualization charts that effectively summarize the key findings from the EDA.
 
 - [data_merging.py](https://github.com/crvidondo/final-project-carlos/blob/main/data_merging.py): Loads multiple datasets and merges into one comprehensive DataFrame.
     
@@ -29,15 +31,15 @@ The project consists of the following files:
     
 - [model_building.py](https://github.com/crvidondo/final-project-carlos/blob/main/model_building.py): A well-documented Python code that includes model selection, training, predictions performed and evaluation metrics.
 
-- [xgboost_model.pkl](linkgithub): Saved model that can be loaded for making predictions.
+- [xgboost_model.pkl](https://github.com/crvidondo/final-project-carlos/blob/main/xgboost_model.pkl): Saved model that can be loaded for making predictions.
 
-- [scaler_carlos.pkl](linkgithub): Saved scaler that was trained with the data.
+- [scaler_carlos.pkl](https://github.com/crvidondo/final-project-carlos/blob/main/scaler_carlos.pkl): Saved scaler that was trained with the data.
 
-- [requirements.txt](linkgithub): Lists all the packages required for the project.
+- [requirements.txt](https://github.com/crvidondo/final-project-carlos/blob/main/requirements.txt): Lists all the packages required for the project.
     
-- [streamlit_app.py](linkgithub): Deployment of the product into a user-friendly web app.
+- [streamlit_app.py](https://github.com/crvidondo/final-project-carlos/blob/main/streamlit_app.py): Deployment of the product into a user-friendly web app.
 
-- [Project presentation](link github): Powerpoint file that presents the project to the cohort.
+- [Final Project Presentation](link github): Powerpoint file that presents the project to the cohort.
 
 
 ## Project overview
